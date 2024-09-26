@@ -1,0 +1,46 @@
+#character {
+    width: 64px; /* largeur d'une frame */
+    height: 64px; /* hauteur d'une frame */
+    background-image: url('/images/character.png');
+    background-repeat: no-repeat;
+    position: relative;
+    animation: walk-down 0.5s steps(3) infinite;
+  }
+  
+  @keyframes walk-down {
+    from { background-position: 0 0; }
+    to { background-position: -192px 0; } /* 3 frames de 64px chacune (64 * 3) */
+  }
+  
+  @keyframes walk-left {
+    from { background-position: 0 -64px; }
+    to { background-position: -192px -64px; }
+  }
+  
+  @keyframes walk-right {
+    from { background-position: 0 -128px; }
+    to { background-position: -192px -128px; }
+  }
+  
+  @keyframes walk-up {
+    from { background-position: 0 -192px; }
+    to { background-position: -192px -192px; }
+  }
+  
+  /* Ajoute des classes pour les différentes directions */
+  .walk-down {
+    animation: walk-down 0.5s steps(3) infinite;
+  }
+  
+  .walk-left {
+    animation: walk-left 0.5s steps(3) infinite;
+  }
+  
+  .walk-right {
+    animation: walk-right 0.5s steps(3) infinite;
+  }
+  
+  .walk-up {
+    animation: walk-up 0.5s steps(3) infinite;
+  }
+  
